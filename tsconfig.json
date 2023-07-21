@@ -1,0 +1,12 @@
+{
+        "compilerOptions": {
+                "module": "AMD",
+                "target": "ES5",
+                "outDir": "./dist",
+                "noImplicitAny": true,
+                "allowJs": true
+        },
+        "include": [
+                "src"
+        ]
+}

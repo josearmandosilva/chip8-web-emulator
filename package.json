@@ -1,0 +1,22 @@
+{
+  "name": "chip8emulator",
+  "version": "1.0.0",
+  "description": "Web Chip8 Emulator w/ visualization",
+  "scripts": {
+    "watch": "webpack --watch"
+  },
+  "author": "José Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-loader": "^8.0.18",
+    "typescript": "^4.2.3",
+    "webpack": "^5.26.3",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3"
+  }
+}
