@@ -128,12 +128,12 @@ const App: FunctionComponent = (): JSX.Element => {
             </div>
         </div>
         <div>Developed by José Silva</div>
-        <div>
+        <div className="mt-3">
           References: 
           <ul>
-            <li>https://en.wikipedia.org/wiki/CHIP-8</li>
-            <li>https://tobiasvl.github.io/blog/write-a-chip-8-emulator/</li>
-            <li>http://devernay.free.fr/hacks/chip8/C8TECH10.HTM</li>
+            <li><a href="https://en.wikipedia.org/wiki/CHIP-8">https://en.wikipedia.org/wiki/CHIP-8</a></li>
+            <li><a href="https://tobiasvl.github.io/blog/write-a-chip-8-emulator/">https://tobiasvl.github.io/blog/write-a-chip-8-emulator/</a></li>
+            <li><a href="http://devernay.free.fr/hacks/chip8/C8TECH10.HTM">http://devernay.free.fr/hacks/chip8/C8TECH10.HTM</a></li>
           </ul>
         </div>
     </main>
