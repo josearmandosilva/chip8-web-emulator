@@ -14,9 +14,11 @@ export class Chip8 {
     keyboard: IKeyboard;
     screen: Screen;
     fontset: Uint8Array;
+    _timeout: NodeJS.Timeout;
 
     constructor(screen: IScreen, keyboard: IKeyboard, audio: IAudio) {
-        this.fontset = new Uint8Array([0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
+        this.fontset = new Uint8Array([
+            0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
             0x20, 0x60, 0x20, 0x20, 0x70, // 1
             0xF0, 0x10, 0xF0, 0x80, 0xF0, // 2
             0xF0, 0x10, 0xF0, 0x10, 0xF0, // 3
@@ -40,18 +42,26 @@ export class Chip8 {
 
     load(rom: Uint8Array): void {
         this.cpu.load(rom);
+    }
+
+    start() : void {
         this.cycle();
+    }
+
+    stop() : void {
+        clearTimeout(this._timeout);
     }
 
     cycle(): void {
         let self = this;
         this.cpu.cycle();
-        setTimeout(() => { 
+        this._timeout = setTimeout(() => {
             self.cycle();
         }, 1000 / 60);
     }
 
     reset(): void {
+        this.stop();
         this.cpu.initialize();
     }
 }

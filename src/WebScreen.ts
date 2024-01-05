@@ -8,6 +8,8 @@ export class WebScreen implements IScreen {
 
     constructor(canvas: HTMLCanvasElement) {
         this.ctx = canvas.getContext("2d");
+        this.ctx.fillStyle = "#000000";
+        this.ctx.fillRect(0, 0, 64 * 10, 32 * 10);
     }
     init(cpu: CPU): void {
         this.cpu = cpu;

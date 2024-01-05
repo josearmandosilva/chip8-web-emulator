@@ -74,7 +74,6 @@ export class CPU implements IKeyboardKeyListener {
     step() {
         // Fetch Opcode
         this.opcode = (this.memory.get(this.pc) << 8) | this.memory.get(this.pc + 1);
-        //console.log("opcode: " + this.opcode.toString(16));
         // Decode Opcode
         let x = (this.opcode & 0x0F00) >> 8;
         let y = (this.opcode & 0x00F0) >> 4;
@@ -186,7 +185,6 @@ export class CPU implements IKeyboardKeyListener {
                 this.I = nnn;
                 break;
             case 0xB000: // BNNN Flow PC=V0+NNN	Jumps to the address NNN plus V0.
-                console.log("SET PC: " + this.V.get(0) + nnn);
                 this.pc = this.V.get(0) + nnn;
                 break;
             case 0xC000: // CXNN Rand Vx=rand()&NN Sets VX to the result of a bitwise and operation on a random number (Typically: 0 to 255) and NN.

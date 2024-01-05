@@ -1,12 +1,15 @@
 {
+        "moduleResolution": "node",
         "compilerOptions": {
                 "module": "AMD",
                 "target": "ES5",
                 "outDir": "./dist",
                 "noImplicitAny": true,
-                "allowJs": true
+                "allowJs": true,
+                "jsx": "react"
         },
         "include": [
                 "src"
-        ]
+        ],
+        "exclude": ["node_modules", "dist", "lib"]
 }

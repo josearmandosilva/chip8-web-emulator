@@ -12,22 +12,10 @@ export class WebKeyboard implements IKeyboard {
         this.keys = new Array<number>(16).fill(0); // 0 to F
         this.keyPressed = -1;
         this.keyMap = {
-            'X': 0,
-            '1': 1,
-            '2': 2,
-            '3': 3,
-            'Q': 4,
-            'W': 5,
-            'E': 6,
-            'A': 7,
-            'S': 8,
-            'D': 9,
-            'Z': 0xA,
-            'C': 0xB,
-            '4': 0xC,
-            'R': 0xD,
-            'F': 0xE,
-            'V': 0xF,
+            'X': 0, '1': 1, '2': 2, '3': 3,
+            'Q': 4, 'W': 5, 'E': 6, 'A': 7,
+            'S': 8, 'D': 9, 'Z': 0xA, 'C': 0xB,
+            '4': 0xC, 'R': 0xD, 'F': 0xE, 'V': 0xF,
         };
         let self = this;
         window.onkeydown = function(event: KeyboardEvent) {
